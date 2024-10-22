@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 29%,
+    rgba(29, 63, 195, 1) 91%
+  );
+  display: flex;
+}
+.todo {
+  width: 100%;
+  max-width: 540px;
+  background: #fff;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+  margin: auto;
+  align-self: center;
+}
+.todo-title {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+.todo h2 img {
+  width: 45px;
+  margin-right: 10px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+  background: rgba(213, 213, 243, 0.8);
+  font-size: 16px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+.btn {
+  background: #002765;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  padding: 16px 24px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.list-task {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.list-task li {
+  position: relative;
+  list-style: none;
+  font-size: 20px;
+  padding: 16px 8px 12px 50px;
+  cursor: pointer;
+  user-select: none;
+  max-width: 350px;
+}
+.list-task li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  background-image: url(images/unchecked.svg);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+.checked {
+  text-decoration: line-through;
+}
+.checked::before {
+  background-image: url(images/checked.png) !important;
+}
+ul li span {
+  position: absolute;
+  right: -100px;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #002765;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 10px;
+}
+ul li span:hover {
+  background-color: rgba(213, 213, 243, 0.8);
+}
